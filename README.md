@@ -27,7 +27,7 @@ variable which load existing vpc detail info
 
 vpc details filter
 
-* subnet
+* [subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html)
   * availability-zone - The Availability Zone for the subnet. You can also use availabilityZone as the filter name.
   * availability-zone-id - The ID of the Availability Zone for the subnet. You can also use availabilityZoneId as the filter name.
   * available-ip-address-count - The number of IPv4 addresses in the subnet that are available.
