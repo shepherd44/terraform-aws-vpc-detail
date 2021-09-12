@@ -6,7 +6,7 @@ Terraform module which load vpc detail info
 
 ```hcl
 module "vpc" {
-    source = "../../"
+    source  = "shepherd44/vpc-detail/aws"
 
     vpc_id = "vpc id"
     filters = {

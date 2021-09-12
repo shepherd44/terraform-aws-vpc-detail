@@ -4,7 +4,7 @@
 provider "aws" {}
 
 module "vpc" {
-    source = "../../"
+    source  = "shepherd44/vpc-detail/aws"
 
     vpc_id = tolist(data.aws_vpcs.vpc_ids.ids)[0]
 }
