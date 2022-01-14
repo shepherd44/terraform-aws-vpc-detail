@@ -4,12 +4,6 @@ provider "aws" {
 
 data "aws_vpcs" "vpc_ids" {}
 
-module "vpc" {
-    source = "../../"
-
-    vpc_id = tolist(data.aws_vpcs.vpc_ids.ids)[0]
-}
-
 module "vpc-with-filter" {
     source = "../../"
 

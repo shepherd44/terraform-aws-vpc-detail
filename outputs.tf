@@ -49,3 +49,16 @@ output "subnets" {
 #     ]
 #     value = data.aws_subnet.subnets
 # }
+
+output "security-groups" {
+    depends_on = [
+        data.aws_security_group.security_groups
+    ]
+    value = [
+        for item in data.aws_security_group.security_groups: {
+            id = item.id
+            arn = item.arn
+            tags = item.tags
+        }
+    ]
+}
