@@ -25,6 +25,11 @@ variable which load existing vpc detail info
 
 ### filter
 
+default load
+
+* subnet: load
+* security-group: not load
+
 vpc details filter
 
 * [subnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSubnets.html)
@@ -44,7 +49,7 @@ vpc details filter
   * tag:\<key\> - The key/value combination of a tag assigned to the resource. Use the tag key in the filter name and the tag value as the filter value. For example, to find all resources that have a tag with the key Owner and the value TeamA, specify tag:Owner for the filter name and TeamA for the filter value.
   * tag-key - The key of a tag assigned to the resource. Use this filter to find all resources assigned a tag with a specific key, regardless of the tag value.
   * vpc-id - The ID of the VPC for the subnet.
-* [security-group](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html)
+* [security-group](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html):
   * description - The description of the security group.
   * egress.ip-permission.cidr - An IPv4 CIDR block for an outbound security group rule.
   * egress.ip-permission.from-port - For an outbound rule, the start of port range for the TCP and UDP protocols, or an ICMP type number.
